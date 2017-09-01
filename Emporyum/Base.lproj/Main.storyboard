@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Adq-lk-1Jw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Emporyum-->
+        <scene sceneID="9D1-SY-Xlt">
+            <objects>
+                <viewController id="5vQ-RD-Hw4" customClass="mainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R0o-VL-MSy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gVS-58-nOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ZA-da-o76">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxK-IV-zu3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="0.004503600095" blue="0.00095760506100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-WK-6FE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="zOy-rM-0JK" kind="embed" identifier="Show Image" id="NkL-Vv-nJp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ftV-WK-6FE" firstAttribute="leading" secondItem="9ZA-da-o76" secondAttribute="leading" id="AcL-rv-YZg"/>
+                            <constraint firstItem="lxK-IV-zu3" firstAttribute="bottom" secondItem="ftV-WK-6FE" secondAttribute="bottom" id="Otf-uG-qWc"/>
+                            <constraint firstItem="lxK-IV-zu3" firstAttribute="trailing" secondItem="ftV-WK-6FE" secondAttribute="trailing" id="S2G-kG-VLs"/>
+                            <constraint firstItem="ftV-WK-6FE" firstAttribute="top" secondItem="9ZA-da-o76" secondAttribute="top" id="VqI-zQ-B1e"/>
+                            <constraint firstItem="lxK-IV-zu3" firstAttribute="leading" secondItem="ftV-WK-6FE" secondAttribute="leading" id="eFm-3B-swd"/>
+                            <constraint firstItem="lxK-IV-zu3" firstAttribute="top" secondItem="ftV-WK-6FE" secondAttribute="top" id="grB-d9-ayw"/>
+                            <constraint firstAttribute="bottom" secondItem="ftV-WK-6FE" secondAttribute="bottom" id="qMR-d5-oWW"/>
+                            <constraint firstAttribute="trailing" secondItem="ftV-WK-6FE" secondAttribute="trailing" id="uz2-ie-Oep"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Emporyum" id="E5x-cg-7f2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="36J-Rs-kgu">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="takePhoto:" destination="5vQ-RD-Hw4" id="48b-EZ-70a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="camaraButton" destination="36J-Rs-kgu" id="gYj-I7-GUk"/>
+                        <outlet property="contentView" destination="lxK-IV-zu3" id="rgT-fa-hRl"/>
+                        <outlet property="displayImageView" destination="ftV-WK-6FE" id="nJz-BG-QgJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prA-J5-gKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="V6j-mK-isC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-16" y="176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ev8-Ps-mkx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Adq-lk-1Jw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ztm-W5-tYy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.004503600095" blue="0.00095760506100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5vQ-RD-Hw4" kind="relationship" relationship="rootViewController" id="jof-TL-33v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9X6-fJ-8m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="181"/>
+        </scene>
+        <!--Show Image View Controller-->
+        <scene sceneID="EH9-5l-poA">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zOy-rM-0JK" customClass="ShowImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k6j-a8-vbW"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3L-5m-fqU"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ajv-3F-dxL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FTQ-bX-Agk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FTQ-bX-Agk" firstAttribute="leading" secondItem="Ajv-3F-dxL" secondAttribute="leading" id="1ht-h8-01X"/>
+                            <constraint firstItem="FTQ-bX-Agk" firstAttribute="top" secondItem="Ajv-3F-dxL" secondAttribute="top" id="cz1-aV-EZP"/>
+                            <constraint firstAttribute="bottom" secondItem="FTQ-bX-Agk" secondAttribute="bottom" id="lap-7H-ICw"/>
+                            <constraint firstAttribute="trailing" secondItem="FTQ-bX-Agk" secondAttribute="trailing" id="nO6-sJ-D47"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="imageView" destination="FTQ-bX-Agk" id="g9j-RT-10Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1YP-Mk-HkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="176"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
